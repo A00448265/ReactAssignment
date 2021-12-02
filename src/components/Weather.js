@@ -42,7 +42,7 @@ class Weather extends Component {
 
     setTempState(){
         this.setState({ selectedMenu: !this.state.selectedMenu })
-        weatherF = (parseFloat(this.state.temp_c) * 9 / 5) + 32 ;  //(T . 9/5) + 32
+        weatherF = ((parseFloat(this.state.temp_c) * 9 / 5) + 32).toFixed(2)  ;  //(T . 9/5) + 32
         console.log("temp is " + weatherF);    
     }
 
